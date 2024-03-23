@@ -1,5 +1,9 @@
+import { MouseEvent } from "react";
+
 function ListGroup() {
 	let items = ['Houston', 'New York', 'Chicago', 'Atlanta', 'Cleveland'];
+
+    const handleClick = (event: MouseEvent) => console.log(event)
 
 	return (
 		<>
