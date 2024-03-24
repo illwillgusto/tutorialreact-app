@@ -1,8 +1,12 @@
 import { useState } from "react";
+// { items: [], heading: string}, to do this we will use interface 
+interface ListGroupProps {
+    items: string[];
+    heading: string;
+}
 
 
-
-function ListGroup() {
+function ListGroup(props: ListGroupProps) {
 	let items = ['Houston', 'New York', 'Chicago', 'Atlanta', 'Cleveland'];
     
     //this is a hook, a hook is a function that allows us to tap into built-in features in react 
