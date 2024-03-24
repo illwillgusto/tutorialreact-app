@@ -6,8 +6,7 @@ interface ListGroupProps {
 }
 
 
-function ListGroup(props: ListGroupProps) {
-	let items = ['Houston', 'New York', 'Chicago', 'Atlanta', 'Cleveland'];
+function ListGroup({items, heading}: Props) {
     
     //this is a hook, a hook is a function that allows us to tap into built-in features in react 
     const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -22,7 +21,7 @@ function ListGroup(props: ListGroupProps) {
     
 	return (
 		<>
-			<h1>List</h1>
+			<h1>{heading}</h1>
 			{items.length === 0 && <p>No item found</p>}
 			<ul className='list-group'>
 				{items.map((item, index) => (
