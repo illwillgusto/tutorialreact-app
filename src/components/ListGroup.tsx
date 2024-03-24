@@ -4,7 +4,6 @@ import { useState } from "react";
 
 function ListGroup() {
 	let items = ['Houston', 'New York', 'Chicago', 'Atlanta', 'Cleveland'];
-    let selectedIndex = 0;
     
     //this is a hook, a hook is a function that allows us to tap into built-in features in react 
     const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -26,7 +25,7 @@ function ListGroup() {
 					<li
 						className={ selectedIndex === index ? 'list-group-item active' : 'list-group-item' }
 						key={item}
-						onClick={() => { selectedIndex = index; }}>
+						onClick={() => { setSelectedIndex(index); }}>
 						{item}
 					</li>
 				))}
